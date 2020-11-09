@@ -1,12 +1,12 @@
 import unittest
 
-import test
-import test2
+import test_assertions
+import complex_test
 
 loader = unittest.TestLoader()
 
-suite = loader.loadTestsFromModule(test)
-suite.addTests(loader.loadTestsFromModule(test2))
+suite = loader.loadTestsFromModule(test_assertions)
+suite.addTests(loader.loadTestsFromModule(complex_test))
 
 runner = unittest.TextTestRunner(verbosity=2)
 result = runner.run(suite)
