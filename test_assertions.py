@@ -65,6 +65,7 @@ class MyTest(unittest.TestCase):
 
 	def tearDown(self):
 		unittest.TestCase.tearDown(self)
+		del(self.myclass)
 
 	def testTrue(self):
 		result = self.myclass.always_True()
@@ -93,4 +94,3 @@ class MyTest(unittest.TestCase):
 if (__name__ == '__main__'):
 	unittest.main()
 
-	

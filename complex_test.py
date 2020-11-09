@@ -11,6 +11,8 @@ class ComplexTest(unittest.TestCase):
 
 	def tearDown(self):
 		unittest.TestCase.tearDown(self)
+		del(self.C1)
+		del(self.C2)
 		# self.C1.close()
 		# self.C2.close()
 
