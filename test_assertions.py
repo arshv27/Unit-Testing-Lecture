@@ -65,13 +65,8 @@ class MyTest(unittest.TestCase):
 
 	def tearDown(self):
 		unittest.TestCase.tearDown(self)
-<<<<<<< HEAD
 
-		del self.myclass
-
-=======
 		del(self.myclass)
->>>>>>> 50d37659c69823ffb2d6775544fc191bbf67c2b8
 
 	def testTrue(self):
 		result = self.myclass.always_True()
@@ -93,13 +88,9 @@ class MyTest(unittest.TestCase):
 	def testNotEqual(self):
 		third = self.myclass.subtract_nums()
 		fourth = self.myclass.divide_nums()
-<<<<<<< HEAD
-=======
 
 		self.assertNotEqual(third, fourth)
 
 
 if (__name__ == '__main__'):
 	unittest.main()
->>>>>>> 50d37659c69823ffb2d6775544fc191bbf67c2b8
-
