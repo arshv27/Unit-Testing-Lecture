@@ -1,5 +1,5 @@
 import unittest
-from MyClass import MyClass
+from mock import MyClass
 
 class MockDataSource(object):
     def __init__(self):
