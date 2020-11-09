@@ -1,55 +1,55 @@
-import unittest
+# import unittest
 
-from mymodule import MyClass
+# from mymodule import MyClass
 
-class MyTest(unittest.TestCase):
+# class MyTest(unittest.TestCase):
 
-	def testTrue(self):
-		myclass = MyClass(2, 2)
+# 	def testTrue(self):
+# 		myclass = MyClass(2, 2)
 
-		try:
-			result = myclass.always_True()
-			self.asssertTrue(result)
+# 		try:
+# 			result = myclass.always_True()
+# 			self.assertTrue(result)
 
-		finally:
-			myclass.close()
-
-
-	def testFalse(self):
-		myclass = MyClass(2, 2)
-
-		try:
-			result = myclass.always_False()
-			self.asssertFalse(result)
-
-		finally:
-			myclass.close()
+# 		finally:
+# 			myclass.close()
 
 
-	def testEqual(self):
-		myclass = MyClass(2, 2)
+# 	def testFalse(self):
+# 		myclass = MyClass(2, 2)
 
-		try:
-			first = myclass.add_nums()
-			second = myclass.multiply_nums()
+# 		try:
+# 			result = myclass.always_False()
+# 			self.assertFalse(result)
 
-			self.assertEqual(first, second)
-
-		finally:
-			myclass.close()
+# 		finally:
+# 			myclass.close()
 
 
-	def testNotEqual(self):
-		myclass = MyClass(2, 2)
+# 	def testEqual(self):
+# 		myclass = MyClass(2, 2)
 
-		try:
-			third = myclass.subtract_nums()
-			fourth = myclass.divide_nums()
+# 		try:
+# 			first = myclass.add_nums()
+# 			second = myclass.multiply_nums()
 
-			self.assertNotEqual(third, fourth)
+# 			self.assertEqual(first, second)
 
-		finally:
-			myclass.close()
+# 		finally:
+# 			myclass.close()
+
+
+# 	def testNotEqual(self):
+# 		myclass = MyClass(2, 2)
+
+# 		try:
+# 			third = myclass.subtract_nums()
+# 			fourth = myclass.divide_nums()
+
+# 			self.assertNotEqual(third, fourth)
+
+# 		finally:
+# 			myclass.close()
 
 
 import unittest
@@ -66,29 +66,28 @@ class MyTest(unittest.TestCase):
 	def tearDown(self):
 		unittest.TestCase.tearDown(self)
 
-		self.myclass.close()
+		# self.myclass.dispose()
 
 
 	def testTrue(self):
-		result = self.myclass.method()
-		self.asssertTrue(result)
+		result = self.myclass.always_True()
+		self.assertTrue(result)
 
 
 	def testFalse(self):
-		result = myclass.always_False()
-		self.asssertFalse(result)
+		result = self.myclass.always_False()
+		self.assertFalse(result)
 
 
 	def testEqual(self):
-		first = myclass.add_nums()
-		second = myclass.multiply_nums()
+		first = self.myclass.add_nums()
+		second = self.myclass.multiply_nums()
 
 		self.assertEqual(first, second)
 
 
-
 	def testNotEqual(self):
-		third = myclass.subtract_nums()
-		fourth = myclass.divide_nums()
+		third = self.myclass.subtract_nums()
+		fourth = self.myclass.divide_nums()
 
 		self.assertNotEqual(third, fourth)
