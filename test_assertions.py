@@ -66,7 +66,7 @@ class MyTest(unittest.TestCase):
 	def tearDown(self):
 		unittest.TestCase.tearDown(self)
 
-		# self.myclass.dispose()
+		del self.myclass
 
 
 	def testTrue(self):
