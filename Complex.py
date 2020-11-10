@@ -9,6 +9,7 @@ class Complex:
 
 	def equal(self, C):
 		return (self.real_part==C.get_r() and self.imaginary_part==C.get_i())
+		# return (self.real_part==C.get_i() and self.imaginary_part==C.get_r())
 
 	def add(self, C):
 		return Complex(self.real_part+C.get_r(), self.imaginary_part+C.get_i())
